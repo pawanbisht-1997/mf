@@ -1,0 +1,337 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --themecolorone: #0062bd;
+  --themecolortwo: #ff0000;
+}
+/* global css  */
+.container {
+  width: 100%;
+  max-width: 1180px;
+  margin: auto;
+}
+a {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+
+/* mainbanner  */
+.mainbanner {
+  height: 100vh;
+  background: linear-gradient(90deg, #0062bd, #bd0000c4);
+}
+/* header  */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 12px 0;
+  z-index: 999;
+  background-color: transparent;
+  transition: background-color 0.6s ease, transform 0.6s ease;
+  box-shadow: none; /* Initial state without box-shadow */
+}
+
+/* Default logo */
+.logo .logo-default {
+  display: block;
+  transition: opacity 0.6s ease;
+}
+
+/* Scrolled logo */
+.logo .logo-scrolled {
+  display: none;
+  transition: opacity 0.6s ease;
+}
+
+/* When scrolling down */
+.header.scrolled .logo-default {
+  display: none;
+}
+
+.header.scrolled .logo-scrolled {
+  display: block;
+  width: 150px;
+}
+
+.header.scrolled {
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding-bottom: 10px;
+  padding-top: 20px;
+}
+
+.header.shrink {
+  transform: translateY(-10px); /* Slightly move it up when scrolling down */
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header a {
+  color: #fff;
+  transition: color 0.3s ease;
+  font-size: 18px;
+  text-transform: capitalize;
+}
+
+.header.scrolled a {
+  color: #000;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  width: 17%;
+}
+header .logo img {
+  width: 100%;
+}
+header nav ul li {
+  display: inline-block;
+  margin-left: 28px;
+}
+
+/* header a {
+  color: #fff;
+  font-weight: 500;
+  font-size: 18px;
+} */
+
+.header .callrequest {
+  background: #343672;
+  padding: 10px 22px;
+  border-radius: 5px;
+  color: #000;
+  text-transform: capitalize;
+}
+
+.header .callrequest a {
+  color: #fff;
+  font-size: 16px;
+}
+
+/* bannertext  */
+.bannercontant {
+  height: 100%;
+  position: relative;
+}
+.bannercontant::before {
+  position: absolute;
+  content: "";
+  background-image: url(../img/backgroundpattern2.webp);
+  height: 100%;
+  inset: 0;
+  background-size: contain;
+  background-position: left;
+  background-repeat: no-repeat;
+  z-index: -1;
+  opacity: 0.8;
+}
+
+.bannercontant .container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: space-between;
+}
+.bannercontant .container .bannertext {
+  width: 65%;
+
+  margin-top: 9%;
+}
+.bannercontant .bannertext h1 {
+  font-size: 53px;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 13px;
+  text-transform: capitalize;
+  width: 90%;
+}
+
+.bannercontant .bannertext h1 span {
+  color: #ffcb14;
+}
+
+.bannercontant .bannertext ul li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 15px;
+  color: #fff;
+  font-size: 19px;
+  font-weight: 500;
+}
+.bannercontant .bannertext ul li:nth-child(2) {
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+  padding: 0px 15px;
+}
+
+/* bannercontent  */
+
+.demo {
+  height: 500px;
+}
+
+.bannertext .trained {
+  margin-top: 20px;
+
+  display: flex;
+  align-items: center;
+}
+.bannertext .trained img {
+  width: 90px;
+  margin-right: 10px;
+}
+
+.bannertext .trained h5 {
+  color: #fff;
+  font-size: 17px;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+/* banner img  */
+
+.bannerimg {
+  width: 35%;
+  height: 100%;
+  display: flex;
+  align-items: end;
+  position: relative;
+}
+.bannerimg img {
+  width: 100%;
+}
+
+.bannertext a {
+  text-decoration: none;
+  color: #fff;
+  margin-top: 15px;
+  display: inline-block;
+  font-size: 19px;
+  padding: 8px 12px;
+  border-radius: 5px;
+  background: #880e4f;
+  display: inline-flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.bannertext a img {
+  width: 23px;
+}
+
+.bannerimg .fb,
+.insta,
+.youtube,
+.google {
+  position: absolute;
+
+  width: 44px;
+}
+.bannerimg .fb {
+  left: 5%;
+  top: 53%;
+}
+.bannerimg .insta {
+  right: 2%;
+  top: 53%;
+}
+
+.bannerimg .youtube {
+  right: 2%;
+  top: 80%;
+}
+
+.bannerimg .google {
+  top: 80%;
+}
+
+/* Add this to your CSS */
+@keyframes slowFloat {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Apply the animation to all icons */
+.bannerimg .fb,
+.bannerimg .insta,
+.bannerimg .youtube,
+.bannerimg .google {
+  position: absolute;
+  width: 44px;
+  animation: slowFloat 3s ease-in-out infinite;
+}
+
+.retention {
+  width: 258px;
+  background: #833b6bde;
+  position: absolute;
+  padding: 10px;
+  border-radius: 5px;
+  bottom: 10%;
+  color: #fff;
+  padding-left: 25px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+.retention h5 span {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.retention h5 img {
+  width: auto;
+}
+
+/* Typing Effect */
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  white-space: nowrap;
+  /* border-right: 2px solid #ffcb14; */ /* Removed blinking line */
+  animation: typing 4s steps(22, end) infinite;
+  font-weight: 600;
+  color: #ffcb14;
+}
+
+@keyframes typing {
+  0% {
+    max-width: 0;
+  }
+  50% {
+    max-width: 100%;
+  }
+  60% {
+    max-width: 100%;
+  }
+  100% {
+    max-width: 0;
+  }
+}

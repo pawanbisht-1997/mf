@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>marketing fundas</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- mainbanner  -->
+    <div class="mainbanner">
+        <header class="header">
+            <div class="container">
+                <div class="logo">
+                    <img src="./img/logo.png" alt="Default Logo" class="logo-default"> <!-- Default logo -->
+                    <img src="./img/Final Logomain.png" alt="Scrolled Logo" class="logo-scrolled">
+                    <!-- Logo when scrolled -->
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#">Courses</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Resources</a></li>
+                        <li><a href="#">Blog</a></li>
+
+                    </ul>
+                </nav>
+                <div class="callrequest">
+                    <a href="#">Book call with us</a>
+                </div>
+            </div>
+
+
+        </header>
+
+        <div class="bannercontant">
+            <div class="container">
+                <div class="bannertext">
+                    <h1>Globally Reconized Name
+                        in <span class="typewriter">digital marketing</span>
+                    </h1>
+                    <ul>
+                        <li>Services</li>
+                        <li>Training</li>
+                        <li>Consultation</li>
+                    </ul>
+
+                    <div class="trained">
+                        <img src="./img/worldwide-students.png" alt="">
+                        <h5>100000+ Students trained</h5>
+                    </div>
+
+                    <div class="trained">
+                        <img src="./img/satified.png" alt="">
+                        <h5>2000+ Statisfied Clients</h5>
+                    </div>
+                    <div class="call">
+                        <a href="tel:919354447104"><img src="./img/cell-phone.png" alt=""> +91-9354447104</a>
+                    </div>
+                </div>
+                <div class="bannerimg">
+                    <img src="./img/banner-right2.png" alt="">
+                    <div class="fb">
+                        <img src="./img/facebook.png" alt="">
+                    </div>
+                    <div class="insta">
+                        <img src="./img/instagram (1).png" alt="">
+                    </div>
+                    <div class="youtube">
+                        <img src="./img/youtube.png" alt="">
+                    </div>
+                    <div class="retention">
+                        <div class="box">
+                            <h5><span>30%</span> <img src="./img/click.png" alt=""></h5>
+                        </div>
+                        <p>Increase in user retention</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- header  -->
+
+
+
+    <div class="demo">
+
+    </div>
+    <script>
+        const header = document.querySelector('.header');
+        let lastScrollY = window.scrollY;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.scrollY;
+
+            if (currentScroll > lastScrollY && currentScroll > 50) {
+                // Scrolling down
+                header.classList.add('scrolled');
+                header.classList.add('shrink');
+            } else if (currentScroll < lastScrollY && currentScroll <= 50) {
+                // Scrolling up
+                header.classList.remove('scrolled');
+                header.classList.remove('shrink');
+            }
+
+            lastScrollY = currentScroll; // Update the last scroll position
+        });
+    </script>
+
+
+
+
+
+</body>
+
+</html>
